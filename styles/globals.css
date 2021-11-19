@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+
+:root{
+  --color-prim:#fff;
+  --color-sec:#0175b0;
+  --color-gray:rgb(87, 87, 87);
+
+  --font-size-h1: 3.8rem;
+  --font-size-h2: 2.6rem;
+  --font-size-h3: 2.2rem;
+  --font-size-h4: 1.8rem;
+  --font-size-h5: 1.2rem;
+
+  --font-fam-Ubuntu: 'Ubuntu', sans-serif;
+
+  --font-weight-700: 700;
+  --font-weight-500: 500;
+  --font-weight-400: 400;
+}
+
+.nav {
+  background: #fff;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: relative;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  max-width: 1500px;
+}
+
+.nav-logo {
+  cursor: pointer;
+  height: 85%;
+}
+.nav-logo img{
+  height: 100%;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.nav-item {
+  height: 90px;
+  
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-family: var(--font-fam-Ubuntu);
+  color: var(--color-sec);
+}
+
+.nav-links:hover {
+  border-bottom: 5px solid var(--color-gray);
+  transition: all 0.25s ease-out;
+}
+
+@media screen and (max-width: 960px) {
+      
+  .NavItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 0;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: var(--color-sec);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    color: var(--color-prim);
+  }
+ 
+
+  .nav-links:hover {
+    background-color: var(--color-prim);
+    color: var(--color-sec);
+    border-bottom: 0;
+  }
+
+  .nav-logo {
+    position: absolute;
+    /* top: 10px; */
+    left: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 2.35rem;
+    cursor: pointer;
+    color: var(--color-sec);
+  }
+
+  .fa-times {
+    color: var(--color-sec);;
+    font-size: 3rem;
+  }
+}
