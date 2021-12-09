@@ -1,0 +1,44 @@
+
+.about{
+    text-align: center;
+    font-size: var(--font-size-h5);
+}
+.about img{
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 70vh;
+    display: block;
+}
+
+.about-content{
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    line-height: var(--line-height-p);
+    text-align: left;
+    background-color: var(--color-lightGray);
+
+}
+
+.about h3{
+    padding-top: .5rem;
+}
+
+
+.behandlingar{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+.behandlingar-container li{
+   text-align: left;
+   padding-bottom: 0.7rem;
+}
+.behandlingar-container{
+    margin: 0 1.5rem;
+}
+
+@media screen and (max-width: 800px){
+    .behandlingar{
+        flex-direction: column;
+    }
+}

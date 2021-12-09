@@ -1,27 +1,13 @@
-// import logoImg from "../Images/Logo.png";
+import Image from "next/image";
+import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faFacebook} from "@fortawesome/free-brands-svg-icons"
 
 
 const Footer = () => {
     return ( 
         <div className="footer" id={"contact"}>
-            <div className="footer-wrapper">
-                <div className="footer-img">
-                    {/* <img src={logoImg} alt="" /> */}
-                </div>
-                <div className="footer-item">
-                    <h3>Kontakta Oss</h3>
-                    <p>Vedums Tandvård</p>
-                    <p>Bitternavögen 2</p>
-                    <p>53 460 Vedum</p>
-                    <p>Tel: 0512-40630</p>
-                </div>
-                <div className="footer-item">
-                    <h3>Öppettider</h3>
-                    <p>Måndag-Torsdag - 08:00-18:00</p>
-                    <p>Fredag - 08:00-15:00</p>
-                    <p>Lördag-Söndag - Stängt</p>
-                </div>    
-            </div>
+            <FontAwesomeIcon className={"contact-icon"} icon={faFacebook} onClick={() => window.open("https://sv-se.facebook.com/vedumstandvard/")}/>
+            <Image src="/Logo.png" width={200} height={60}/>
             <p>© 2021 Vedums Tandvård</p>
         </div>
      );

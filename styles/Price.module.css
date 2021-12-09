@@ -1,0 +1,52 @@
+.pricehome{
+    
+}
+
+.pricehome-top{
+    background: var(--color-sec);
+}
+
+.pricehome-wrapper{
+    text-align: left;
+    color: var(--color-prim);
+    padding: 3rem;
+}
+
+.pricehome-wrapper h1{
+    font-size: var(--font-size-h2);
+}
+
+.pricehome-wrapper p{
+    font-size: var(--font-size-h5);
+}
+
+.pricehome-item p{
+    color: var(--color-prim);
+    line-height: 1.9;
+    font-size: var(--font-size-h4);
+}
+
+.pricehome-table{
+    padding: 3rem;
+    width: 100%;
+    font-size: var(--font-size-h5);
+}
+.pricehome-table td{
+    padding-top: 1rem;
+}
+.pricehome-wrapper-table p{
+    font-size: var(--font-size-h5);
+    padding: 3rem;
+}
+
+
+@media screen and (max-width: 900px) {
+    .pricehome-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricehome-item:last-child{
+        margin-top: 3rem;
+    }
+}

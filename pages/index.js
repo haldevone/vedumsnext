@@ -1,11 +1,58 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Cards from '../components/Cards';
+import Contact from '../components/Contact';
+import Header from '../components/Header';
+import Image from 'next/image';
+import Link from "next/link";
+import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faBolt} from "@fortawesome/free-solid-svg-icons"
+import {faTooth} from "@fortawesome/free-solid-svg-icons"
+import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons"
 
 export default function Home() {
   return (
-    <div>
-      <h1>Vemdus</h1>
+    <>
+    <Header />
+    <div className={"welcome"}>
+      <div className={"container"}>
+        <div className={"welcome-wrapper"}>
+          <h1>Välkommen till Vedums Tandvård</h1>
+          <p>
+            På Vedums Tandvård erbjuds ett komplett tandvårdsutbud - från traditionella 
+            undersökningar och förebyggande tandvård, till mer avancerat specialisttandvård. 
+            Du hittar våran klinik i Vedum. Du kan enkelt boka en tid genom att kontakta oss på 
+             <span> <FontAwesomeIcon icon={faPhoneAlt}/> 0512-40630</span>. 
+          </p>
+        </div>
+      </div>
+
     </div>
+    <div className={"container"}>
+      <div className={"index-behandlingar"}>
+        <img className={"index-behandlingar-img"} src={"/allman.jpg"} width={500} height={380}/>
+        <div>
+          <h1>Behandlingar <FontAwesomeIcon icon={faTooth}/></h1>
+          <p>
+            Här hittar du mer information om de behandlingar som vi erbjuder.
+          </p>
+          <Link href="/behandlingar">
+            <button className={"btn"} >Läs mer</button>
+          </Link>
+        </div>  
+      </div>
+    </div>
+    <div className={"welcome"}>
+      <div className={"container"} style={{padding:"3rem 0"}}>
+          <h1>Akut Tandvård <FontAwesomeIcon icon={faBolt}/></h1>
+          <p>
+            För dig som söker akut tandvård kan vi snabbt och enkelt hjälpa dig. Det 
+            är viktigt att du så snabbt som möjligt uppsöker tandvård vid akuta besvär
+            då tandvärken kan bli värre ju längre du går med problemen obehandlade.
+            Ta kontakt med oss direkt så ordnar vi en akuttid.
+          </p>
+      </div>
+      </div>
+    <Contact />
+    </>
   )
 }

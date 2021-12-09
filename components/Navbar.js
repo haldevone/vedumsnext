@@ -1,7 +1,10 @@
 import { useState } from "react";
 // import imgLogo from "../Images/Logo.png";
 import Link from "next/link";
-
+import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 
 function Navbar(){
@@ -15,32 +18,34 @@ function Navbar(){
     return(
         <>
         <div className="nav">
+            {/* <i><FontAwesomeIcon icon={faTimes}/></i> */}
             <div className="nav-container">
-                {/* <Link href="/" onClick={closeMobileMenu}> */}
-                    {/* {<img src={imgLogo} alt="" />} */}
-                {/* </Link> */}
+                <div className="nav-logo" onClick={closeMobileMenu}>
+                    <Image src="/Logo.png" width={200} height={60}/>
+                </div>
                 <div className="menu-icon" onClick={handleClick}>
-                    <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+                   {click ? <FontAwesomeIcon icon={faTimes}/>
+                    : <FontAwesomeIcon icon={faBars}/>}
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                      <li className="nav-item">
-                        <Link href="/" onClick={closeMobileMenu}>
-                            <a className="nav-links">Hem</a>
+                        <Link href="/">
+                            <a className="nav-links" onClick={closeMobileMenu}>Hem</a>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link href="/treatments" onClick={closeMobileMenu}>
-                            <a className="nav-links">Behandlingar</a>
+                        <Link href="/behandlingar">
+                            <a className="nav-links" onClick={closeMobileMenu}>Behandlingar</a>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link  href="/price" onClick={closeMobileMenu}>
-                           <a className="nav-links">Priser</a>
+                        <Link  href="/priser">
+                           <a className="nav-links" onClick={closeMobileMenu}>Priser</a>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link href="/about" className="nav-links" onClick={closeMobileMenu}>
-                            <a className="nav-links">Om Oss</a>
+                        <Link href="/about" className="nav-links">
+                            <a className="nav-links" onClick={closeMobileMenu}>Om Oss</a>
                         </Link>
                     </li>
                 </ul>
