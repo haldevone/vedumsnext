@@ -46,7 +46,12 @@ p{
 .container{
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 1rem 1rem;
 }
 
 
@@ -157,7 +162,7 @@ margin: 5rem 0;
 }
 .contact-icon{
   font-size: 5rem;
-  margin-right: 1rem;
+  margin-right: 3rem;
   cursor: pointer;
 }
 
@@ -177,9 +182,10 @@ margin: 5rem 0;
 
 }
 .welcome-wrapper{
-  max-width: 600px;
   color: var(--color-sec);
   margin-bottom: 3rem;
+  display: flex;
+  gap: 40px;
 }
 
 .welcome-wrapper p{
@@ -190,9 +196,10 @@ margin: 5rem 0;
   font-weight: var(--font-weight-700);
 }
 
+
 .footer{
   background-color: var(--color-sec);
-  padding-top: 0.5rem;
+  padding-top: 1.5rem;
   margin-bottom: 0;
   text-align: center;
   color: var(--color-prim);
@@ -205,7 +212,7 @@ padding-bottom: 0.5rem;
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 930px) {
       
   .NavItems {
     position: relative;
@@ -258,7 +265,7 @@ padding-bottom: 0.5rem;
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0;
+    top: -0.3rem;
     right: 0;
     transform: translate(-100%, 10%);
     font-size: 2.35rem;
@@ -289,6 +296,13 @@ padding-bottom: 0.5rem;
     text-align: center;
   
   }
+  .welcome-wrapper{
+    flex-direction: column;
+  }
+  .welcome-wrapper img{
+    width: 60%;
+    height: 60%;
+  }
 
 
 }
@@ -305,5 +319,25 @@ padding-bottom: 0.5rem;
   }
   .container{
     text-align: center;
+    padding: 0 1rem;
   }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.fadeIn{
+  animation-name: fadeInFromNone;
+  animation-duration: 0.6s;
+}
+
+.hide{
+  opacity: 0;
 }

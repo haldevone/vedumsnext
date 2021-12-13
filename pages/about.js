@@ -4,15 +4,22 @@ import Map from '../components/Map';
 import styles from '../styles/About.module.css';
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faUsers} from "@fortawesome/free-solid-svg-icons"
+import { useInView } from 'react-intersection-observer';
 
 
 const About = () => {
+    const { ref, inView, entry } = useInView({
+        threshold: 0.4,
+        delay: 200,
+        triggerOnce: true,
+      });
+
     return (
         <> 
         <div className={styles.about}>
             <img src={"/about.jpg"}/>
-            <div className={styles["about-content"]}>
-                <div className={"container"}>
+            <div className={styles["about-content"]} ref={ref}>
+                <div className={inView ? "container fadeIn" : "container hide"}>
                     <h1>Om Oss <FontAwesomeIcon icon={faUsers}/></h1>
                     <p>Vi är en liten klinik med två allmäntandläkare som är nischade inom estetisk 
                         tandvård, en specialisttandläkare inom tandlossning och en 

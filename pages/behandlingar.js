@@ -2,23 +2,33 @@ import styles from '../styles/About.module.css';
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTooth} from "@fortawesome/free-solid-svg-icons"
 import Contact from '../components/Contact';
+import { useInView } from 'react-intersection-observer';
 
 
 const Behandlingar = () => {
+    const { ref, inView, entry } = useInView({
+        threshold: 0.5,
+        delay: 200,
+        triggerOnce: true,
+      });
+
     return ( 
         <div className={styles.about}>
             <img src={"/akut.jpg"}/>
-            <div className={styles["about-content"]}>
+            <div className={styles["about-content"]} ref={ref}>
                 <div className={"container"}>
-                <h1>Behandlingar <FontAwesomeIcon icon={faTooth}/></h1>
-                <p>
-                    Vedums Tandvård är en modern kliniker som erbjuder kompetenta och professionella 
-                    tandläkare och tandhygienister med lång erfarenhet inom tandvården. 
-                </p>
-                <p>
-                Vi erbjuder allt från rutinundersökningar och akuttandvård till specialisttandvård
-                    och estetisk tandvård som till exempel tandreglering och tandblekning.
-                </p>
+                    <div className={inView ? "fadeIn" : "hide"}>
+                    <h1>Behandlingar <FontAwesomeIcon icon={faTooth}/></h1>
+                    <p>
+                        Vedums Tandvård är en modern kliniker som erbjuder kompetenta och professionella 
+                        tandläkare och tandhygienister med lång erfarenhet inom tandvården. 
+                    </p>
+                    <p>
+                    Vi erbjuder allt från rutinundersökningar och akuttandvård till specialisttandvård
+                        och estetisk tandvård som till exempel tandreglering och tandblekning.
+                    </p>
+                    </div>
+               
                 </div>
                
             </div>
