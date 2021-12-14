@@ -25,7 +25,7 @@ const Header = () => {
         <div className={styles["slider-frame"]}>
              <div className={styles["slider-overlay"]}>
                  <div className={styles["slider-overlay-content"]}>
-                     <div className={styles["header-info"]}>
+                     <div className={`${styles['header-info']} ${styles.animateOnStart}`}>
                         <h1>Vedums Tandvård</h1>
                         <p>Vi erbjuder allmän vuxen- och barntandvård</p>
                      </div>
