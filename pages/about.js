@@ -10,7 +10,6 @@ import { useInView } from 'react-intersection-observer';
 const About = () => {
     const { ref, inView, entry } = useInView({
         threshold: 0.4,
-        delay: 200,
         triggerOnce: true,
       });
 

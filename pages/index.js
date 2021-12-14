@@ -13,7 +13,6 @@ import { useInView } from 'react-intersection-observer';
 export default function Home() {
   const { ref, inView, entry } = useInView({
     threshold: 0.4,
-    delay: 200,
     triggerOnce: true,
   });
 

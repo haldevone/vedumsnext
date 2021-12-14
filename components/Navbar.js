@@ -21,7 +21,10 @@ function Navbar(){
             {/* <i><FontAwesomeIcon icon={faTimes}/></i> */}
             <div className="nav-container">
                 <div className="nav-logo" onClick={closeMobileMenu}>
-                    <Image src="/Logo.png" width={200} height={60}/>
+                    <Link href="/">
+                        <Image src="/Logo.png" width={200} height={60} onClick={closeMobileMenu}/>
+                    </Link>
+                    
                 </div>
                 <div className="menu-icon" onClick={handleClick}>
                    {click ? <FontAwesomeIcon icon={faTimes}/>

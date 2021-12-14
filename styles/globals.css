@@ -213,6 +213,7 @@ padding-bottom: 0.5rem;
 }
 .contact-icon-logo{
   max-width: 230px;
+  cursor: pointer;
 }
 
 

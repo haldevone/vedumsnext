@@ -8,7 +8,6 @@ import { useInView } from 'react-intersection-observer';
 const Behandlingar = () => {
     const { ref, inView, entry } = useInView({
         threshold: 0.5,
-        delay: 200,
         triggerOnce: true,
       });
 
