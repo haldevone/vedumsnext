@@ -44,11 +44,14 @@ const Priser = () => {
                     </tr>
                 </table>
                 <p>
-                Eftersom kostnaden varierar beroende på om det är en eller flera 
-                tänder som ska lagas eller ersättas är priserna ungefärliga. 
-                Efter en första undersökning kan vi presentera kostnaden för just 
-                din behandling, med utgångspunkt från dina förutsättningar och behov.
+                    Eftersom kostnaden varierar beroende på om det är en eller flera 
+                    tänder som ska lagas eller ersättas är priserna ungefärliga. 
+                    <br />
+                    <br />
+                    Efter en första undersökning kan vi presentera kostnaden för just 
+                    din behandling, med utgångspunkt från dina förutsättningar och behov.
                 </p>
+               
             </div>
             <Contact />
       </div>

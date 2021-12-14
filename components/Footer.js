@@ -7,7 +7,7 @@ const Footer = () => {
     return ( 
         <div className="footer" id={"contact"}>
             <FontAwesomeIcon className={"contact-icon"} icon={faFacebook} onClick={() => window.open("https://sv-se.facebook.com/vedumstandvard/")}/>
-            <Image src="/Logo.png" width={200} height={60}/>
+            <img className={"contact-icon-logo"} src="/Logo.png"/>
             <p>© 2021 Vedums Tandvård</p>
         </div>
      );
