@@ -7,7 +7,11 @@ import Link from "next/link";
 const Footer = () => {
     return ( 
         <div className="footer" id={"contact"}>
-            <FontAwesomeIcon className={"contact-icon"} icon={faFacebook} onClick={() => window.open("https://sv-se.facebook.com/vedumstandvard/")}/>
+                <FontAwesomeIcon 
+                    className={"contact-icon"}
+                    size="5x" 
+                    icon={faFacebook} onClick={() => 
+                    window.open("https://sv-se.facebook.com/vedumstandvard/")}/>
             <Link href={"/"}>
                 <img className={"contact-icon-logo"} src="/Logo.png"/>
             </Link>

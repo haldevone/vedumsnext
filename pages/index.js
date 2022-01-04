@@ -9,6 +9,9 @@ import {faBolt} from "@fortawesome/free-solid-svg-icons"
 import {faTooth} from "@fortawesome/free-solid-svg-icons"
 import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons"
 import { useInView } from 'react-intersection-observer';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// import { config } from '@fortawesome/fontawesome-svg-core';
+// config.autoAddCss = false; /* eslint-disable import/first */
 
 export default function Home() {
   const { ref, inView, entry } = useInView({

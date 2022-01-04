@@ -43,6 +43,7 @@ const Priser = () => {
                         <td>---kr</td>
                     </tr>
                 </table>
+                <p>OBS Priserna updateras inom kort</p>
                 <p>
                     Eftersom kostnaden varierar beroende på om det är en eller flera 
                     tänder som ska lagas eller ersättas är priserna ungefärliga. 
