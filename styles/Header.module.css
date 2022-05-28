@@ -75,6 +75,9 @@
   font-weight: bold;
   font-size: var(--font-size-h4);
 }
+.phone p{
+  font-size: 1.3rem;
+}
 
 .animateOnStart{
   animation: fade-in 2s;

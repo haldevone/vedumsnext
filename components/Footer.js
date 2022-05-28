@@ -15,8 +15,10 @@ const Footer = () => {
             <Link href={"/"}>
                 <img className={"contact-icon-logo"} src="/Logo.png"/>
             </Link>
-            
-            <p>© 2021 Vedums Tandvård</p>
+            <div className="footer-bottom">
+                <p>© Made by Haldevone</p>
+                <p>{`${new Date().getFullYear()}  Vedums Tandvård`}</p>
+            </div>
         </div>
      );
 }

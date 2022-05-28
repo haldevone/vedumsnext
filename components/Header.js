@@ -30,7 +30,7 @@ const Header = () => {
                         <p>Vi erbjuder allmän vuxen- och barntandvård</p>
                      </div>
                      <div className={styles["phone"]}>
-                        <span> <FontAwesomeIcon icon={faPhoneAlt}/> 0512-40630</span>
+                        <p><span> <FontAwesomeIcon icon={faPhoneAlt}/></span> 0512-40630</p>
                     </div>
                  </div>
              </div>

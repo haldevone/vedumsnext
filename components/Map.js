@@ -8,7 +8,6 @@ const Map = () => {
             <div className={"map-container"}>
                 <div className={"container"}>
                     <h1>Hitta hit <FontAwesomeIcon icon={faMapMarkerAlt}/></h1>
-                    <p>Vi finns mittemot.....</p>
                 </div>
 
             </div>

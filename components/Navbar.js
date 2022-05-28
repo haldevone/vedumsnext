@@ -17,7 +17,7 @@ function Navbar(){
 
     return(
         <>
-        <div className="nav">
+        <nav className="nav">
             {/* <i><FontAwesomeIcon icon={faTimes}/></i> */}
             <div className="nav-container">
                 <div className="nav-logo" onClick={closeMobileMenu}>
@@ -53,7 +53,7 @@ function Navbar(){
                     </li>
                 </ul>
             </div>
-        </div>
+        </nav>
         </>
     )
 }
