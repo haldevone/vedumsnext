@@ -1,4 +1,3 @@
-
 import Contact from '../components/Contact';
 import Map from '../components/Map';
 import styles from '../styles/About.module.css';
@@ -19,7 +18,7 @@ const About = () => {
             <img src={"/about.jpg"}/>
             <div className={styles["about-content"]} ref={ref}>
                 <div className={inView ? "container fadeIn" : "container hide"}>
-                    <h1>Om Oss <FontAwesomeIcon icon={faUsers}/></h1>
+                    <h2>Om Oss <FontAwesomeIcon icon={faUsers}/></h2>
                     <p>Vi är en liten klinik med två allmäntandläkare som är nischade inom estetisk 
                         tandvård, en specialisttandläkare inom tandlossning och en 
                         specialisttandläkare inom käkkirurgi.

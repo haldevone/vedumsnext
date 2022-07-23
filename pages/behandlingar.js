@@ -17,7 +17,7 @@ const Behandlingar = () => {
             <div className={styles["about-content"]} ref={ref}>
                 <div className={"container"}>
                     <div className={inView ? "fadeIn" : "hide"}>
-                    <h1>Behandlingar <FontAwesomeIcon icon={faTooth}/></h1>
+                    <h2>Behandlingar <FontAwesomeIcon icon={faTooth}/></h2>
                     <p>
                         Vedums Tandvård är en modern kliniker som erbjuder kompetenta och professionella 
                         tandläkare och tandhygienister med lång erfarenhet inom tandvården. 
@@ -31,30 +31,30 @@ const Behandlingar = () => {
                 </div>
                
             </div>
-            
-            <h3>Vi kan hjälpa dig med</h3>
-            <div className={styles["behandlingar"]}>
+            <div className='container'>
+                <h3>Vi kan hjälpa dig med</h3>
+                <div className={styles["behandlingar"]}>
+                    <div className={styles["behandlingar-container"]}>
+                        <ul>
+                            <li>Allmän tandvård</li>
+                            <li>Akuttandvård</li>
+                            <li>Avtagbara proteser</li> 
+                            <li>Behandling av tandvårdsrädda</li>
+                            <li>Estetisk tandvård</li>
+                            <li>Konserverande behandling</li>
+                        </ul>
+                    </div>
                 <div className={styles["behandlingar-container"]}>
                     <ul>
-                        <li>Allmän tandvård</li>
-                        <li>Akuttandvård</li>
-                        <li>Avtagbara proteser</li> 
-                        <li>Behandling av tandvårdsrädda</li>
-                        <li>Estetisk tandvård</li>
-                        <li>Konserverande behandling</li>
-                    </ul>
+                            
+                            <li>Kronor och broar</li>
+                            <li>Implantatbehandlingar</li>
+                            <li>Käkleds- och muskulär behandling</li>
+                            <li>Rotbehandling</li>
+                            <li>Tandlossningsbehandling</li>
+                        </ul>
                 </div>
-               <div className={styles["behandlingar-container"]}>
-                <ul>
-                        
-                        <li>Kronor och broar</li>
-                        <li>Implantatbehandlingar</li>
-                        <li>Käkleds- och muskulär behandling</li>
-                        <li>Rotbehandling</li>
-                        <li>Tandlossningsbehandling</li>
-                    </ul>
                </div>
-               
             </div>
             <Contact />    
         </div>

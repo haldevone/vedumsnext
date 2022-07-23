@@ -7,7 +7,7 @@ const Map = () => {
         <div className={"map-info"}>
             <div className={"map-container"}>
                 <div className={"container"}>
-                    <h1>Hitta hit <FontAwesomeIcon icon={faMapMarkerAlt}/></h1>
+                    <h2>Hitta hit <FontAwesomeIcon icon={faMapMarkerAlt}/></h2>
                 </div>
 
             </div>

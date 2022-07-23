@@ -1,8 +1,5 @@
-import Head from 'next/head'
-import Cards from '../components/Cards';
 import Contact from '../components/Contact';
-import Header from '../components/Header';
-import Image from 'next/image';
+import Header from '../layout/Header';
 import Link from "next/link";
 import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBolt} from "@fortawesome/free-solid-svg-icons"
@@ -10,8 +7,7 @@ import {faTooth} from "@fortawesome/free-solid-svg-icons"
 import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons"
 import { useInView } from 'react-intersection-observer';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-// import { config } from '@fortawesome/fontawesome-svg-core';
-// config.autoAddCss = false; /* eslint-disable import/first */
+
 
 export default function Home() {
   const { ref, inView, entry } = useInView({
@@ -46,7 +42,7 @@ export default function Home() {
       <div className={"index-behandlingar card"} >
         <img className={"index-behandlingar-img"} src={"/allman.jpg"} width={500} height={380}/>
         <div>
-          <h1>Behandlingar <FontAwesomeIcon icon={faTooth}/></h1>
+          <h2>Behandlingar <FontAwesomeIcon icon={faTooth}/></h2>
           <p>
             Här hittar du mer information om de behandlingar som vi erbjuder.
           </p>
@@ -58,7 +54,7 @@ export default function Home() {
     </div>
     <div className={"welcome"}>
       <div className={"container"}>
-          <h1>Akut Tandvård <FontAwesomeIcon icon={faBolt}/></h1>
+          <h2>Akut Tandvård <FontAwesomeIcon icon={faBolt}/></h2>
           <p>
             För dig som söker akut tandvård kan vi snabbt och enkelt hjälpa dig. Det 
             är viktigt att du så snabbt som möjligt uppsöker tandvård vid akuta besvär
